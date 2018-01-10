@@ -1,0 +1,51 @@
+
+.fixed-top{
+  max-width:1200px;
+}
+
+
+/*SLIDER*/
+
+.carousel-indicators li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #000 \9;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+
+/*PROJECTS*/
+.projects{
+  max-width:1200px;
+}
+.projects .prod-card{
+  max-width:370px;
+  padding:10px;
+  position: relative;
+}
+
+.projects .card-img-overlay{
+  z-index:1;
+}
+
+.projects .card-img-overlay:after{
+position:absolute;
+content:'';
+background-color:#222533;
+opacity:0.7;
+z-index:-1;
+}
+.projects .card-img-overlay:before{
+  position:absolute;
+  content:'';
+  border:3px solid white;
+  top:25px;
+  left:25px;
+  right:25px;
+  bottom:25px;
+}
