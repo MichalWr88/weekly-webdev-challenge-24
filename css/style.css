@@ -49,3 +49,34 @@ z-index:-1;
   right:25px;
   bottom:25px;
 }
+/* TRENDING ITEMS */
+
+.trending{
+  background: url('../img/bg2.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.trending-items{
+  background:transparent;
+  border:none;
+}
+
+/* SUBSCRIBE */
+.subscribe{
+  background: url('../img/bgs.jpg');
+  background-position: center;
+  background-size: cover;
+  position:relative;
+  z-index:1;
+}
+.subscribe::after{
+  position: absolute;
+  content:'';
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color:#222533;
+  opacity:0.7;
+  z-index:-1;
+}
