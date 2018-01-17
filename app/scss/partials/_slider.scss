@@ -1,10 +1,12 @@
 .slider-one{
     height:100vh;
-    .carousel-item{
-        height:100%;
-
-        img{
-            height:100%;
-        }
+    background-color:red;
+    .carousel-inner{
+    	height:100%;
     }
+
+.carousel-caption{
+	top:100%;
+	z-index:2;
+}
 }
