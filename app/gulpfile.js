@@ -1,36 +1,33 @@
-const gulp = require('gulp');
-const browserSync = require('browser-sync');
+var gulp = require('gulp');
+var browserSync = require('browser-sync');
+var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
+var autoprefixer = require('gulp-autoprefixer');
+var cleanCSS = require('gulp-clean-css');
+var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
 
-const sass = require('gulp-sass');
-const sourcemaps = require('gulp-sourcemaps');
-const autoprefixer = require('gulp-autoprefixer');
-const cleanCSS = require('gulp-clean-css');
-const uglify = require('gulp-uglify');
-const concat = require('gulp-concat');
-const imagemin = require('gulp-imagemin');
-const changed = require('gulp-changed');
-const htmlReplace = require('gulp-html-replace');
-const htmlMin = require('gulp-htmlmin');
-const del = require('del');
-const sequence = require('run-sequence');
+var imagemin = require('gulp-imagemin');
+var changed = require('gulp-changed');
 
-const babel = require('gulp-babel');
-const through = require('through2');
+var htmlReplace = require('gulp-html-replace');
+var htmlMin = require('gulp-htmlmin');
+var del = require('del');
+var sequence = require('run-sequence');
 
+var babel = require('gulp-babel'); //nie zainstaloway
 /*-------------------------------------------------------*/
-const config = {
+var config = {
     dist: 'dist/',
     app: 'app/',
     cssin: 'app/css/**/*.css',
-    jsin: 'app/ES6/**/*.js',
+    jsin: 'app/js/**/*.js',
     imgin: 'app/images/**/*.{jpg,jpeg,png,gif}',
     htmlin: 'app/*.html',
     scssin: 'app/scss/**/*.scss',
     cssout: 'dist/css/',
-    js5out: 'app/js',
-    js5in: 'app/js/**/*.js',
     jsout: 'dist/js/',
-    imgout: 'dist/img/',
+    imgout: 'dist/images/',
     htmlout: 'dist/',
     scssout: 'app/css/',
     cssoutname: 'style-min.css',
@@ -40,26 +37,30 @@ const config = {
 };
 
 /*--------------------------------------------------------*/
-gulp.task('reload', () => {
+gulp.task('reload', function() {
     browserSync.reload();
 });
 
-gulp.task('serve', ['sass'], () => {
+
+/*odpalenie gulpa*/
+gulp.task('serve', ['sass'], function() {
+
     browserSync({
         server: config.app
-    })
+    });
 });
 
 
 /*-----------------------------------------------------------------*/
-gulp.watch([config.htmlin], ['reload']);
+gulp.watch(config.htmlin,['reload']);
 gulp.watch(config.scssin, ['sass']);
-gulp.watch(config.jsin, ['babel']);
 
+
+/*gulp kompilujacy pliki scss na css*/
 
 gulp.task("sass", function() {
     return gulp.src(config.scssin)
-        .pipe(sourcemaps.init())
+        .pipe(sourcemaps.init()) /*gulp sourcemap*/
         .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
         // outputStyle: 'expanded',  rodzaj formatowania css
         // sourceComments: 'map'    czy wypisywac zrodla do scss
@@ -71,39 +72,6 @@ gulp.task("sass", function() {
         .pipe(browserSync.stream());
 
 });
-
-function logFileHelpers() {
-    return through.obj((file, enc, cb) => {
-        console.log(file.babel.usedHelpers);
-        cb(null, file);
-    });
-}
-
-function handleError(error) {
-    console.log(error);
-    this.emit('end');
-}
-
-
-
-
-gulp.task('babel', () => {
-    gulp.src(config.jsin)
-        .pipe(sourcemaps.init())
-        .pipe(babel({
-            presets: ['latest'],
-        }))
-        .on('error', handleError)
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest(config.js5out))
-        .pipe(logFileHelpers())
-        .pipe(browserSync.stream());
-});
-
-
-// FOLDER DIST
-
-
 //minifikacja html------------------------------
 gulp.task('html', function() {
     return gulp.src(config.htmlin)
@@ -116,7 +84,7 @@ gulp.task('html', function() {
             sortClassName: true,
             // collapseWhitespace: true
         }))
-        .pipe(gulp.dest(config.dist))
+        .pipe(gulp.dest(config.dist));
 });
 
 // minifikacja CSS--------------------------------------
@@ -127,36 +95,42 @@ gulp.task('css', function() {
         .pipe(gulp.dest(config.cssout));
 });
 
-// minifikacja JS--------------------------------------
+// babel i es6-----------------------------------------------
+// gulp.task('babel', function(){
+//   return gulp.src(config.jsin)
+//   .pipe(concat(config.jsoutname))  //nadanie nazwy pliku sconcatenowanu
+//   .pipe(uglify())
+//   .pipe(gulp.dest(config.jsout));
+// });
+// minifikacja js ------------------------------------------
+
 gulp.task('js', function() {
-    return gulp.src(config.js5in)
-        .pipe(concat(config.jsoutname))
-        .pipe(uglify())
+    return gulp.src(config.jsin)
+        .pipe(concat(config.jsoutname)) //nadanie nazwy pliku sconcatenowanu
+        // .pipe(uglify())
         .pipe(gulp.dest(config.jsout));
 });
 
 // minimalize images------------------------------------------
 
-// gulp.task('img', function() {
-//   return gulp.src(config.imgin)
-//     .pipe(changed(config.imgout))
-//     .pipe(imagemin())
-//     .pipe(gulp.dest(config.imgout));
-// });
-
-
+gulp.task('img', function() {
+  return gulp.src(config.imgin)
+    .pipe(changed(config.imgout))
+    .pipe(imagemin())
+    .pipe(gulp.dest(config.imgout));
+});
 
 
 // run delete ---------------------------
 
-gulp.task('clean', () => {
-    del([config.dist])
+gulp.task('clean', function() {
+    return del([config.dist]);
 });
 // run sequence---------------------------
 
-gulp.task('build', () => {
-    sequence('clean', 'css', 'js', 'html');
+gulp.task('build', function() {
+    sequence('clean', ['css', 'js', 'html', 'img']);
 });
 
 
-gulp.task('default', ['serve']);
+gulp.task('default', ['serve'], function() {});

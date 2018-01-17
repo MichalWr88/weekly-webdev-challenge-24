@@ -1,4 +1,9 @@
 
+@import 'partials/footer';
+@import 'partials/trending';
+@import 'partials/subscribe';
+@import 'partials/slider';
+
 .fixed-top{
   max-width:1200px;
 }
@@ -20,9 +25,7 @@
 }
 
 /*PROJECTS*/
-.projects{
-  max-width:1200px;
-}
+
 .projects .prod-card{
   max-width:370px;
   padding:10px;
@@ -62,21 +65,4 @@ z-index:-1;
 }
 
 /* SUBSCRIBE */
-.subscribe{
-  background: url('../img/bgs.jpg');
-  background-position: center;
-  background-size: cover;
-  position:relative;
-  z-index:1;
-}
-.subscribe::after{
-  position: absolute;
-  content:'';
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background-color:#222533;
-  opacity:0.7;
-  z-index:-1;
-}
+
