@@ -1,10 +1,13 @@
-
+@import 'partials/general';
+@import 'partials/header';
+@import 'partials/main';
+@import 'partials/latest';
 @import 'partials/footer';
 @import 'partials/trending';
 @import 'partials/subscribe';
 @import 'partials/slider';
 
-.fixed-top{
+.fixed-top nav{
   max-width:1200px;
 }
 

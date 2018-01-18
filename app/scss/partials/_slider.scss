@@ -1,12 +1,28 @@
-.slider-one{
-    height:100vh;
-    background-color:red;
-    .carousel-inner{
-    	height:100%;
+.slider-main {
+    height: calc(100vh - 61.25px);
+    .carousel-inner {
+        height: 100%;
     }
-
-.carousel-caption{
-	top:100%;
-	z-index:2;
-}
+    .carousel-caption {
+        top: 100%;
+        font-family: 'Open Sans', sans-serif;
+		font-weight:300;
+    }
+    .slider-desc {
+    	font-size:1.5rem;
+    }
+    .slider-desc-bold {
+    	font-family: 'Lato', sans-serif;
+    	font-weight:700;
+    	font-size:3.0rem;
+    }
+    .slider-desc-light {
+	font-size:1.5rem;
+    }
+    .slider-button{
+    	font-family: 'Lato', sans-serif;
+    	font-weight:700;
+    	max-width:200px;
+    	min-width:100px;
+    }
 }

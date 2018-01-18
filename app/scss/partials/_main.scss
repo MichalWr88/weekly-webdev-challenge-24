@@ -1,3 +1,25 @@
-// .section-header{
-    
-// }
+.main-page {
+    margin-top: 56px;
+}
+
+.section-header {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+    position: relative;
+    padding: 1.5rem 0;
+    &:after,
+    &:before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 30%;
+        height: 3px;
+        background-color: #dc0000;
+    }
+    &:before {
+        top: 100%;
+    }
+}
