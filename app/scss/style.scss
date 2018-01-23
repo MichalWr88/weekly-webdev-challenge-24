@@ -11,21 +11,12 @@
   max-width:1200px;
 }
 
-
+.btn{
+  text-transform:uppercase;
+}
 /*SLIDER*/
 
-.carousel-indicators li {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0 5px;
-  text-indent: -999px;
-  cursor: pointer;
-  background-color: #000 \9;
-  background-color: rgba(0, 0, 0, 0);
-  border: 1px solid #fff;
-  border-radius: 10px;
-}
+
 
 /*PROJECTS*/
 
@@ -56,16 +47,4 @@ z-index:-1;
   bottom:25px;
 }
 /* TRENDING ITEMS */
-
-.trending{
-  background: url('../img/bg2.jpg');
-  background-position: center;
-  background-size: cover;
-}
-.trending-items{
-  background:transparent;
-  border:none;
-}
-
-/* SUBSCRIBE */
 

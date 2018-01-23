@@ -1,16 +1,16 @@
-.header-page{
+.header-page {
 
-	.navbar{
-
-	}
+    .navbar {
+    	height:$headerHeight;
+    }
 }
 
-.header-item{
-	font-family: 'Open Sans', sans-serif;
-	font-size:1.8rem;
-	}
-
-.header-logo{
-	width:125px;
-	height:auto;
+.header-item {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.8rem;
 }
+
+.header-logo {
+    width: 125px;
+    height: auto;
+} //end header
