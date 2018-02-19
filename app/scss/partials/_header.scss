@@ -1,8 +1,16 @@
-.header-page {
+.header-page {}
 
-    .navbar {
-    	height:$headerHeight;
-    }
+.header-nav {
+    .navbar-brand {}
+}
+
+.header-collapse {
+	margin: 0 -10px;
+	background-color:white;
+}
+
+.navbar {
+    height: $headerHeight;
 }
 
 .header-item {
@@ -14,3 +22,6 @@
     width: 125px;
     height: auto;
 } //end header
+.header-item {
+    margin-left: 10px;
+}
