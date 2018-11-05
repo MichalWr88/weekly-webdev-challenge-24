@@ -1,9 +1,9 @@
 .footer-page{
-    max-height:160px;
-    min-height:80px;
+    height:160px;
     display: flex;
     justify-content: center;
-    align-items: center;
+		align-items: center;
+		border: 1px solid black;
 }
  .footer-icon{
      height:20px;

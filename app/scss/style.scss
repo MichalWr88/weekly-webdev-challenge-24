@@ -1,3 +1,4 @@
+@import '../../node_modules/bootstrap/scss/bootstrap';
 @import 'partials/general';
 @import 'partials/header';
 @import 'partials/main';
@@ -7,44 +8,4 @@
 @import 'partials/subscribe';
 @import 'partials/slider';
 
-.fixed-top nav{
-  max-width:1200px;
-}
-
-.btn{
-  text-transform:uppercase;
-}
-/*SLIDER*/
-
-
-
-/*PROJECTS*/
-
-.projects .prod-card{
-  max-width:370px;
-  padding:10px;
-  position: relative;
-}
-
-.projects .card-img-overlay{
-  z-index:1;
-}
-
-.projects .card-img-overlay:after{
-position:absolute;
-content:'';
-background-color:#222533;
-opacity:0.7;
-z-index:-1;
-}
-.projects .card-img-overlay:before{
-  position:absolute;
-  content:'';
-  border:3px solid white;
-  top:25px;
-  left:25px;
-  right:25px;
-  bottom:25px;
-}
-/* TRENDING ITEMS */
 
