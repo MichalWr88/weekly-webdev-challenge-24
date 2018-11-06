@@ -2,79 +2,176 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-   
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:300,300i,700" rel="stylesheet">
-		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet">
-		
-    <link href="./css/style.css" rel="stylesheet">
-    <title>BRAND LY</title>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:300,300i,700" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet">
+
+	<link href="./css/style.css" rel="stylesheet">
+	<title>BRAND LY</title>
 </head>
 
 <body>
-    <!-- header -->
-   <header>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand" href="#">Brandly</a>
+	<!-- header -->
+	<header class="page-header container-fluid d-flex position-fixed p-0 m-0">
+		<nav class="navbar navbar-expand-lg  w-100 d-flex justify-content-around p-0 m-0">
+			<a class="navbar-brand brand-text" href="#"><span class="brand-text--bg">Brand</span><span class="brand-text--sm">ly</span></a>
 			<!-- mobile -->
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 			 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-		
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+			<!-- menu -->
+			<div class="collapse navbar-collapse col d-flex justify-content-end m-0 p-0" id="navbarSupportedContent">
+				<ul class="navbar-nav ">
+					<li class="nav-item active px-5">
+						<a class="nav-link " href="#">Home </a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Link</a>
+					<li class="nav-item px-5">
+						<a class="nav-link" href="#">Shop</a>
 					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-						 aria-expanded="false">
-							Dropdown
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="#">Action</a>
-							<a class="dropdown-item" href="#">Another action</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">Something else here</a>
-						</div>
+					<li class="nav-item px-5">
+						<a class="nav-link" href="#">Brands</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link disabled" href="#">Disabled</a>
+					<li class="nav-item px-5">
+						<a class="nav-link" href="#">Blog</a>
+					</li>
+					<li class="nav-item px-5">
+						<a class="nav-link" href="#">About</a>
+					</li>
+					<li class="nav-item pl-5">
+						<a class="nav-link" href="#">Contact</a>
 					</li>
 				</ul>
 			</div>
 		</nav>
-	 </header>
-        <!-- menu -->
+	</header>
 
-  
-    <main class="container-fluid p-0 main-page" id="Home">
-        <!-- slider -->
+	<main class="container-fluid p-0 main-page" id="Home">
+		<!-- slider -->
+		<section id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="carousel-item active ">
+					<div class=" carousel-item-img">
+						<img class="d-block w-100 " src="./img/bgc1.jpg" alt="First slide">
+					</div>
+					<div class="carousel-caption d-none d-md-block">
+						<h5>spring / summer collection</h5>
+						<p>up to 60% discount on new arrivals</p>
+						<p>trending new items, from creators around the world</p>
+						<button type="button" class="btn btn-lg btn-outline-light">Light</button>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="carousel-item-img">
+						<img class="d-block w-100 " src="./img/bgc2.jpeg" alt="Second slide">
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="carousel-item-img">
+						<img class="d-block w-100 " src="./img/bgc3.jpeg" alt="Third slide">
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="carousel-item-img">
+						<img class="d-block w-100 " src="./img/bgc4.jpeg" alt="Four slide">
+					</div>
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</section>
+		<!-- latest -->
+		<section class="container py-5">
+			<h5 class=" text-center">Latest products</h5>
+			<div class=" row">
+				<div class="col-lg-4">
+					<div class="card">
+						<img class="card-img-top" src=".../100px180/" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+								content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="card">
+						<img class="card-img-top" src=".../100px180/" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+								content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="card">
+						<img class="card-img-top" src=".../100px180/" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+								content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="card col-lg-6">
+					<img class="card-img-top" src=".../100px180/" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+							content.</p>
+						<a href="#" class="btn btn-primary">Go somewhere</a>
+					</div>
+				</div>
+				<div class="card col-lg-6">
+					<img class="card-img-top" src=".../100px180/" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+							content.</p>
+						<a href="#" class="btn btn-primary">Go somewhere</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- trending -->
 
-        <!-- latest -->
-      
-        <!-- trending -->
-        
-        <!-- blog -->
-        
-        <!-- subscribe -->
-        
-    </main>
-    <!-- footer -->
-    <footer class="footer-page">
-        <p class="text-center m-0">Made with <img class="footer-icon" alt="heartbeat icon " src="./img/heart.svg"> by WebDonut.net</p>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
-    </script>
-    <script src="./js/script.js">
-    </script>
+		<!-- blog -->
+
+		<!-- subscribe -->
+
+
+	</main>
+	<!-- footer -->
+	<footer class="footer-page">
+		<p class="text-center m-0">Made with <img class="footer-icon" alt="heartbeat icon " src="./img/heart.svg"> by
+			WebDonut.net</p>
+	</footer>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+	 crossorigin="anonymous"></script>
+	<script src="./js/script.js">
+	</script>
 </body>
 
 </html>

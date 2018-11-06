@@ -1,9 +1,11 @@
 @import '../../node_modules/bootstrap/scss/bootstrap';
+@import 'modules/mixins';
+@import 'modules/settings';
 @import 'partials/general';
 @import 'partials/header';
 @import 'partials/main';
-@import 'partials/latest';
 @import 'partials/footer';
+@import 'partials/latest';
 @import 'partials/trending';
 @import 'partials/subscribe';
 @import 'partials/slider';
