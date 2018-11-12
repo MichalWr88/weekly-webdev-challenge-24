@@ -1,7 +1,7 @@
 BebasNeueBook
 OpenSans
 OpenSans-Light
-Lato-Black
 OpenSansLight-Italic
-Lato-Regular
 OpenSans-Bold
+Lato-Regular
+Lato-Black
