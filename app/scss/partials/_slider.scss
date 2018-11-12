@@ -1,49 +1,17 @@
 .carousel-item {
+
 }
-.carousel-item-img {
-	position: relative;
-	z-index: -1;
-	&:after {
-		position: absolute;
-		content: '';
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background-color: rgba(34, 37, 51, 0.4);
-		z-index: 4;
-	}
+.carousel-item-img{
+position: relative;
+z-index:-1;
+&:after{
+	position: absolute;
+	content:'';
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:rgba(34,37,51,0.4);
+	z-index:4;
 }
-.carousel-caption {
-	top:50%;
-	font-family: OpenLight;
-	transform: translateY(-50%);
-	& .caption-text-one {
-		font-size: 2.1rem;
-		letter-spacing: 0.6rem;
-	}
-	& .caption-text-header {
-		font-size: 4.5rem;
-		font-family: LatoBlack;
-	}
-	& .caption-text-two {
-		font-size: 2.4rem;
-	}
-	& .caption-btn {
-		font-size: 1.4rem;
-		font-family: LatoBlack;
-	}
-}
-/* Paginnation */
-.carousel-indicators {
-	height: 1.3rem;
-	& > li {
-		height: 100%;
-		width: 1.3rem;
-		background-color: $white;
-	}
-	& .active {
-		background-color: transparent;
-		border: 2px solid $white;
-	}
 }
