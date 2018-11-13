@@ -1,13 +1,16 @@
 .footer-page{
-    height:160px;
+    height:80px;
     display: flex;
     justify-content: center;
 		align-items: center;
 		border: 1px solid black;
+		font-family: Lato;
+		font-size: 1.8rem;
+		color:$textLight;
 }
  .footer-icon{
      height:20px;
-     width:auto;
+     width:22px;
           animation: heartbeat 1.5s ease-in-out infinite both;
  } 
 

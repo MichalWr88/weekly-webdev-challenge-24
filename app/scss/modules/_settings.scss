@@ -2,9 +2,14 @@
 @include font-face('BebasNeueBook', '../../fonts/BebasNeueBook');
 @include font-face('BebasNeueRegular', '../../fonts/BebasNeueRegular');
 @include font-face('LatoBlack', '../../fonts/lato-black');
+@include font-face('Lato', '../../fonts/lato-regular');
 @include font-face('OpenLight', '../../fonts/opensans-light');
+@include font-face('OpenLightitalic', '../../fonts/opensans-lightitalic');
 
 
 /* colors */
 $white: #ffffff;
 $black: #000000;
+$red:#dc0000;
+$textLight: #9a9a9a;
+$textDark: #333333;
