@@ -10,3 +10,10 @@
     font-style: $style;
   }
  }
+ .contentAB{
+	 position: relative;
+	 &:after, &:before{
+		 position: absolute;
+		 content:'';
+	 }
+ }
