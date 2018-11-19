@@ -99,18 +99,6 @@
 						</div>
 					</div>
 				</div>
-				<!--
-					<a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="sr-only">Previous</span>
-					</a>
-				-->
-				<!--
-					<a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="sr-only">Next</span>
-					</a>
-				-->
 			</section>
 			<!-- latest -->
 			<section class="container py-5">
@@ -141,7 +129,7 @@
 							<img class="card-img-top collect-img" src="./img/watches.jpg" alt="Card image cap" />
 							<figcaption class="position-absolute collect-body">
 								<h5 class="collect-header py-2">Watch</h5>
-								<p class="collect-text px-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+								<p class="collect-text px-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 								<a href="#" class="collect-more"></a>
 							</figcaption>
 						</figure>
@@ -150,7 +138,10 @@
 						<figure class="card position-relative collect-item">
 							<img class="card-img-top collect-img" src="./img/sale.jpg" alt="Card image cap" />
 							<figcaption class="position-absolute collect-body">
-								<h5 class="collect-header--big py-2 text-capitalize text-center">40% Off<br/> New Autumn Collection</h5>
+								<h5 class="collect-header--big py-2 text-capitalize text-center">
+									40% Off<br />
+									New Autumn Collection
+								</h5>
 								<p class="collect-text px-5">Ming sits in the corner the whole day. She's into crochet.</p>
 								<a href="#" class="collect-more"></a>
 							</figcaption>
@@ -160,7 +151,10 @@
 						<figure class="card position-relative collect-item">
 							<img class="card-img-top collect-img" src="./img/promo.jpg" alt="Card image cap" />
 							<figcaption class="position-absolute collect-body">
-								<h5 class="collect-header--big collect-header--width py-2 text-uppercase text-center">Mega sale<br /> on items from spirit collection</h5>
+								<h5 class="collect-header--big collect-header--width py-2 text-uppercase text-center">
+									Mega sale<br />
+									on items from spirit collection
+								</h5>
 								<p class="collect-text px-5">Ming sits in the corner the whole day. She's into crochet.</p>
 								<a href="#" class=" collect-more"></a>
 							</figcaption>
@@ -169,7 +163,96 @@
 				</div>
 			</section>
 			<!-- trending -->
+			<section class="container-fluid py-5 trending">
+				<h5 class=" text-center section-header position-relative text-capitalize my-5 py-4">Trending Items</h5>
 
+				<div id="cTrendIndics" class="carousel  container px-0" data-ride="carousel">
+					<ol class="carousel-indicators">
+						<li data-target="#cTrendIndics" data-slide-to="0" class="rounded-circle active"></li>
+						<li data-target="#cTrendIndics" data-slide-to="1" class="rounded-circle"></li>
+						<li data-target="#cTrendIndics" data-slide-to="2" class="rounded-circle"></li>
+						<li data-target="#cTrendIndics" data-slide-to="3" class="rounded-circle"></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<div class="row">
+								<div class=" carousel-item-img col-lg-6 mx-0">
+									<img class="d-block" src="./img/suite.jpg" alt="First slide" />
+								</div>
+								<div class="d-none d-md-block text-uppercase position-relative col-lg-6 mx-0">
+									<h5 class="caption-text-header p-3">up to 60% discount on new arrivals</h5>
+									<p class="caption-text-one p-3">spring / summer collection</p>
+									<p class="caption-text-two p-3">trending new items, from creators around the world</p>
+									<div class="caption-btn-wrapper">
+										<button type="button" class="btn btn-lg btn-outline-dark item-one caption-btn  text-uppercase">M</button>
+										<button type="button" class="btn btn-lg btn-outline-dark caption-btn item-one text-uppercase ">L</button>
+										<button type="button" class="btn btn-lg btn-outline-dark caption-btn item-one text-uppercase ">XL</button>
+										<button type="button" class="btn btn-lg btn-outline-dark caption-btn item-one  text-uppercase ">Xxl</button>
+										<button
+											type="button"
+											class="btn btn-lg btn-outline-dark caption-btn  w-100 text-uppercase rounded-0 item-two"
+										>
+											shop now
+										</button>
+										<button
+											type="button"
+											class="btn btn-lg btn-outline-dark caption-btn  text w-100 rounded-0 text-uppercase item-two"
+										>
+											size guide
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--
+							<div class="carousel-item">
+								<div class="carousel-item-img col-lg-6">
+									<img class="d-block" src="./img/skirt.jpeg" alt="Second slide" />
+								</div>
+								<div class="carousel-caption d-none d-md-block text-uppercase">
+									<p class="caption-text-one p-3">spring / summer collection</p>
+									<h5 class="caption-text-header p-3">up to 60% discount on new arrivals</h5>
+									<p class="caption-text-two p-3">trending new items, from creators around the world</p>
+									<button type="button" class="btn btn-lg btn-outline-light caption-btn px-5 py-4 text-uppercase">
+										Shop now
+									</button>
+								</div>
+							</div>
+							<div class="carousel-item col-lg-6">
+								<div class="carousel-item-img">
+									<img class="d-block" src="./img/shirt.jpg" alt="Third slide" />
+								</div>
+								<div class="carousel-caption d-none d-md-block text-uppercase">
+									<p class="caption-text-one p-3">spring / summer collection</p>
+									<h5 class="caption-text-header p-3">up to 60% discount on new arrivals</h5>
+									<p class="caption-text-two p-3">trending new items, from creators around the world</p>
+									<button type="button" class="btn btn-lg btn-outline-light caption-btn px-5 py-4 text-uppercase">
+										Shop now
+									</button>
+								</div>
+							</div>
+							<div class="carousel-item col-lg-6">
+								<div class="carousel-item-img"><img class="d-block" src="./img/jeans.jpg" alt="Four slide" /></div>
+								<div class="carousel-caption d-none d-md-block text-uppercase">
+									<p class="caption-text-one p-3">spring / summer collection</p>
+									<h5 class="caption-text-header p-3">up to 60% discount on new arrivals</h5>
+									<p class="caption-text-two p-3">trending new items, from creators around the world</p>
+									<button type="button" class="btn btn-lg btn-outline-light caption-btn px-5 py-4 text-uppercase">
+										Shop now
+									</button>
+								</div>
+							</div>
+						-->
+					</div>
+
+					<a class="carousel-control-prev" href="#cTrendIndics" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#cTrendIndics" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span>
+					</a>
+				</div>
+			</section>
 			<!-- blog -->
 
 			<!-- subscribe -->

@@ -1,0 +1,21 @@
+.trending {
+	background: url('../../img/bg2.jpg');
+
+	.caption-btn-wrapper{
+		display: grid;
+		grid-template-columns: repeat(auto-fill,70px);
+		max-width:370px;
+		grid-gap:30px;
+		.item-one{
+			grid-column: span 1;
+		}
+		.item-two{
+			grid-column: span 2;
+		}
+	}
+	.caption-btn {
+		font-family: LatoBlack;
+		font-size: 1.8rem;
+		
+	}
+}
