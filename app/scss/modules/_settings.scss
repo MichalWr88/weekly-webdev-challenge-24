@@ -5,11 +5,13 @@
 @include font-face('Lato', '../../fonts/lato-regular');
 @include font-face('OpenLight', '../../fonts/opensans-light');
 @include font-face('OpenLightitalic', '../../fonts/opensans-lightitalic');
+@include font-face('OpenRegular', '../../fonts/OpenSans-Regular');
 
 
 /* colors */
 $white: #ffffff;
 $black: #000000;
+$grey:#878787;
 $red:#dc0000;
 $textLight: #9a9a9a;
 $textDark: #333333;

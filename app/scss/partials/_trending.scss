@@ -1,21 +1,60 @@
 .trending {
 	background: url('../../img/bg2.jpg');
 
-	.caption-btn-wrapper{
+	.caption-text-header {
+		font-family: LatoBlack;
+		color: $red;
+		font-size: 3rem;
+	}
+	.caption-text-one {
+		font-family: OpenRegular;
+		color: $textLight;
+		font-size: 1.8rem;
+
+		&:after {
+			position: absolute;
+			content: '';
+			bottom: 0;
+			left: 0;
+			height: 1px;
+			width: 30px;
+			background-color: $black;
+		}
+	}
+	.caption-text-two {
+		font-family: Lato;
+		color: $textLight;
+		font-size: 1.8rem;
+		line-height: 2.5rem;
+		text-transform: initial;
+	}
+	.caption-btn-wrapper {
 		display: grid;
-		grid-template-columns: repeat(auto-fill,70px);
-		max-width:370px;
-		grid-gap:30px;
-		.item-one{
+		grid-template-columns: repeat(auto-fill, 70px);
+		max-width: 370px;
+		grid-gap: 30px;
+		.item-one {
 			grid-column: span 1;
 		}
-		.item-two{
+		.item-two {
 			grid-column: span 2;
 		}
 	}
 	.caption-btn {
 		font-family: LatoBlack;
 		font-size: 1.8rem;
-		
+	}
+	.carousel-indicators {
+		& > li {
+			height: 100%;
+			width: 1.3rem;
+			background-color: $grey;
+		}
+		& .active {
+			background-color: transparent;
+			width: 1.5rem;
+			height: 1.5rem;
+			border: 2px solid $red;
+		}
 	}
 }
