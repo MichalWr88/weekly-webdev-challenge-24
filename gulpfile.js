@@ -13,6 +13,7 @@ const htmlReplace = require('gulp-html-replace');
 const htmlMin = require('gulp-htmlmin');
 const del = require('del');
 const sequence = require('run-sequence');
+const purify = require('gulp-purifycss');
 
 const babel = require('gulp-babel');
 const through = require('through2');
@@ -136,6 +137,7 @@ gulp.task('css', function() {
 		.src(config.cssin)
 		.pipe(concat(config.cssoutname)) //nadanie nazwy pliku sconcatenowanu
 		.pipe(cleanCSS())
+		.pipe(purify([config.jsin, config.htmlin]))
 		.pipe(gulp.dest(config.cssout));
 });
 
