@@ -24,7 +24,7 @@ const config = {
 	app: 'app/',
 	cssin: 'app/css/**/*.css',
 	jsin: 'app/es6/**/*.js',
-	imgin: 'app/images/**/*.{jpg,jpeg,png,gif}',
+	imgin: 'app/img/**/*.{jpg,jpeg,png,gif}',
 	htmlin: 'app/*.html',
 	scssin: 'app/scss/**/*.scss',
 	cssout: 'dist/css/',
@@ -152,12 +152,12 @@ gulp.task('js', function() {
 
 // minimalize images------------------------------------------
 
-// gulp.task('img', function() {
-//   return gulp.src(config.imgin)
-//     .pipe(changed(config.imgout))
-//     .pipe(imagemin())
-//     .pipe(gulp.dest(config.imgout));
-// });
+gulp.task('img', function() {
+  return gulp.src(config.imgin)
+    .pipe(changed(config.imgout))
+    .pipe(imagemin())
+    .pipe(gulp.dest(config.imgout));
+});
 
 // run delete ---------------------------
 
@@ -167,7 +167,7 @@ gulp.task('clean', () => {
 // run sequence---------------------------
 
 gulp.task('build', () => {
-	sequence('clean', 'css', 'js', 'html');
+	sequence('clean', 'css', 'js', 'html','img');
 });
 
 gulp.task('default', ['serve']);
