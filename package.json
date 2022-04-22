@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "gulp": "gulp",
-    "build": "gulp build"
+    "build": "gulp build",
+    "ghpages": "git subtree push --prefix dist origin gh-pages",
+    "serve:dist": "npx http-server ./dist                                            "
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
