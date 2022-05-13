@@ -167,7 +167,7 @@ gulp.task('clean', () => {
 // run sequence---------------------------
 
 gulp.task('build', () => {
-	sequence('clean', 'css', 'js', 'html','img');
+	sequence('clean','img', 'css', 'js', 'html',);
 });
 
 gulp.task('default', ['serve']);
